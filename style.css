@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(145deg, #1b2b40 0%, #16222e 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.game-wrapper {
+    max-width: 1150px;
+    width: 100%;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(3px);
+    border-radius: 3.5rem;
+    padding: 2rem 2rem 2.5rem 2rem;
+    box-shadow: 0 25px 40px -10px rgba(0,0,0,0.7);
+    border: 1px solid rgba(255,255,240,0.15);
+}
+
+/*all pages & end screens share same container */
+.page, .end-screen {
+    display: none; /*hidden by default in js */
+    background: #f4f1de;
+    border-radius: 2.8rem;
+    padding: 2.2rem 2rem 2.5rem 2rem;
+    box-shadow: inset 0 2px 8px rgba(255,250,210,0.6), 0 18px 25px -8px #0a0f17;
+    border: 2px solid #c0b79a;
+    transition: all 0.15s;
+}
+
+.end-screen {
+    text-align: center;
+    background: #2c3e4e;
+    border: 3px solid #e6d9a8;
+    color: #f3ecd9;
+}
+
+.end-screen h2 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 0 4px 0 #1d2a33;
+}
+
+.end-screen p {
+    font-size: 2rem;
+    background: #1e2f3b;
+    display: inline-block;
+    padding: 0.7rem 2.2rem;
+    border-radius: 60px;
+    border: 1px solid #ebd7a4;
+    box-shadow: inset 0 2px 5px #0d171f;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2rem;
+    color: #2f3e46;
+    background: #dbd3b9;
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border: 1px solid #b9aa82;
+}
+
+.page-id {
+    background: #2b3b44;
+    color: #f1e9cf;
+    padding: 0.2rem 1.2rem;
+    border-radius: 40px;
+    font-size: 1.1rem;
+}
+
+.score-badge {
+    background: #25323b;
+    color: #f6e9c9;
+    padding: 0.2rem 1.5rem;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    box-shadow: inset 0 1px 4px #5b523a;
+}
+
+.question-placeholder {
+    background: #e5dcc7;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    margin-bottom: 2.2rem;
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: #1d2d32;
+    border: 2px dashed #8f9a8b;
+    box-shadow: 0 5px 0 #857d64;
+}
+
+.button-trio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.choice-btn {
+    flex: 1 1 0;
+    min-width: 160px;
+    background: #c7b68b;
+    border: none;
+    border-bottom: 6px solid #7d6e4e;
+    color: #1e2b2f;
+    font-size: 1.9rem;
+    font-weight: 700;
+    padding: 1.2rem 0.7rem;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.08s ease-out;
+    letter-spacing: 1.5px;
+    box-shadow: 0 7px 0 #5f533b, 0 4px 12px #101214;
+}
+
+.choice-btn:active {
+    transform: translateY(6px);
+    border-bottom-width: 2px;
+    box-shadow: 0 2px 0 #5f533b;
+}
+
+.choice-btn:hover {
+    background: #dacaa2;
+}
+
+.reset-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.2rem;
+}
+
+#resetBtn {
+    background: #8f9aa3;
+    border: none;
+    border-bottom: 5px solid #4d5a64;
+    padding: 0.8rem 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    color: #f0ebd8;
+    cursor: pointer;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 0 #36424b;
+    transition: 0.08s linear;
+}
+
+#resetBtn:active {
+    transform: translateY(6px);
+    border-bottom-width: 2px;
+    box-shadow: 0 2px 0 #36424b;
+}
+
+.small-note {
+    color: #b4ae9a;
+    text-align: center;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+}
+
+/*scenario Title and Description Styles */
+.scenario-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #1d2d32;
+    margin-bottom: 0.8rem;
+    text-shadow: 1px 1px 0 rgba(255,255,200,0.5);
+}
+
+.scenario-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #2d4a5a;
+    background: rgba(200, 190, 160, 0.3);
+    padding: 0.8rem 1.2rem;
+    border-radius: 1.5rem;
+    border-left: 4px solid #7d6e4e;
+    line-height: 1.5;
+}
+
+/*update question-placeholder to accommodate new structure*/
+.question-placeholder {
+    background: #e5dcc7;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    margin-bottom: 2.2rem;
+    text-align: center;
+    font-weight: 500;
+    color: #1d2d32;
+    border: 2px dashed #8f9a8b;
+    box-shadow: 0 5px 0 #857d64;
+}
+
+/*feedback Cube*/
+.feedback-cube {
+    background: #1e3a4a;
+    border-radius: 2rem;
+    padding: 1.5rem 1.8rem;
+    margin-top: 2rem;
+    border: 3px solid #e6d9a8;
+    box-shadow: 0 10px 0 #0f2835, inset 0 2px 10px rgba(255, 255, 200, 0.2);
+    transform: translateY(0);
+    transition: all 0.2s ease;
+}
+
+.feedback-cube:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 13px 0 #0f2835, inset 0 2px 10px rgba(255, 255, 200, 0.3);
+}
+
+.feedback-header {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    color: #ffd966;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 0 #0a1c24;
+    border-bottom: 2px dashed #e6d9a8;
+    padding-bottom: 0.8rem;
+}
+
+.feedback-content {
+    color: #f0f0e0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.feedback-content p {
+    margin-bottom: 1.2rem;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 1.2rem;
+    border-radius: 1.5rem;
+    border-left: 4px solid #ffd966;
+}
+
+.feedback-tips {
+    list-style-type: none;
+    padding-left: 0.5rem;
+}
+
+.feedback-tips li {
+    margin-bottom: 0.6rem;
+    padding-left: 1.8rem;
+    position: relative;
+    font-size: 1rem;
+}
+
+/*different bullet styles for each ending */
+#feedbackGood .feedback-tips li::before {
+    content: "⭐";
+    position: absolute;
+    left: -5px;
+    color: #ffd700;
+}
+
+#feedbackSoso .feedback-tips li::before {
+    content: "✨";
+    position: absolute;
+    left: -5px;
+    color: #a5d6a5;
+}
+
+#feedbackBad .feedback-tips li::before {
+    content: "⚠️";
+    position: absolute;
+    left: -5px;
+    color: #ff9999;
+}
+
+/*make sure end screens have space for feedback */
+.end-screen {
+    padding-bottom: 2.5rem;
+}
+
+.end-screen p {
+    margin-bottom: 0.5rem;
+}
+
+/*responsive to widnow size*/
+@media (max-width: 600px) {
+    .scenario-title {
+        font-size: 1.5rem;
+    }
+    
+    .scenario-description {
+        font-size: 0.95rem;
+    }
+    
+    .feedback-cube {
+        padding: 1.2rem;
+    }
+    
+    .feedback-header {
+        font-size: 1.4rem;
+    }
+    
+    .feedback-content {
+        font-size: 1rem;
+    }
+    
+    .feedback-tips li {
+        font-size: 0.9rem;
+    }
+}

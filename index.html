@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Literacy · 10 choices</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <!-- all 10 game pages (page0 .. page9) -->
+        <div id="page0" class="page" data-page="0">
+            <div class="page-header">
+                <span class="page-id"> 1 / 10</span>
+                <span class="score-badge" id="scoreDisplay0">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title0">Credit Card Purchase</div>
+                <div class="scenario-description" id="desc0">You want to buy a new gaming console that costs $500. You have a credit card with a $1,000 limit and $300 in your checking account.</div>
+            </div>
+            <div class="button-trio" id="btnGroup0"></div>
+        </div>
+        
+        <div id="page1" class="page" data-page="1">
+            <div class="page-header">
+                <span class="page-id"> 2 / 10</span>
+                <span class="score-badge" id="scoreDisplay1">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title1">First Paycheck</div>
+                <div class="scenario-description" id="desc1">You just got your first job paying $2,000/month. You need to decide what to do with the money.</div>
+            </div>
+            <div class="button-trio" id="btnGroup1"></div>
+        </div>
+        
+        <div id="page2" class="page" data-page="2">
+            <div class="page-header">
+                <span class="page-id"> 3 / 10</span>
+                <span class="score-badge" id="scoreDisplay2">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title2">Emergency Expense</div>
+                <div class="scenario-description" id="desc2">Your car needs $800 in unexpected repairs. You have $1,000 in savings.</div>
+            </div>
+            <div class="button-trio" id="btnGroup2"></div>
+        </div>
+        
+        <div id="page3" class="page" data-page="3">
+            <div class="page-header">
+                <span class="page-id"> 4 / 10</span>
+                <span class="score-badge" id="scoreDisplay3">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title3">Student Loans</div>
+                <div class="scenario-description" id="desc3">You have $10,000 in student loans at 4% interest. You got a $5,000 bonus at work.</div>
+            </div>
+            <div class="button-trio" id="btnGroup3"></div>
+        </div>
+        
+        <div id="page4" class="page" data-page="4">
+            <div class="page-header">
+                <span class="page-id"> 5 / 10</span>
+                <span class="score-badge" id="scoreDisplay4">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title4">Buying a Phone</div>
+                <div class="scenario-description" id="desc4">Your phone broke. A new flagship phone costs $1,200. A refurbished model costs $400.</div>
+            </div>
+            <div class="button-trio" id="btnGroup4"></div>
+        </div>
+        
+        <div id="page5" class="page" data-page="5">
+            <div class="page-header">
+                <span class="page-id"> 6 / 10</span>
+                <span class="score-badge" id="scoreDisplay5">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title5">Investment Choice</div>
+                <div class="scenario-description" id="desc5">You have $1,000 to invest for the long term (20+ years).</div>
+            </div>
+            <div class="button-trio" id="btnGroup5"></div>
+        </div>
+        
+        <div id="page6" class="page" data-page="6">
+            <div class="page-header">
+                <span class="page-id"> 7 / 10</span>
+                <span class="score-badge" id="scoreDisplay6">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title6">Rent vs. Buy</div>
+                <div class="scenario-description" id="desc6">You plan to stay in a city for 2 years for a job. You have enough for a down payment.</div>
+            </div>
+            <div class="button-trio" id="btnGroup6"></div>
+        </div>
+        
+        <div id="page7" class="page" data-page="7">
+            <div class="page-header">
+                <span class="page-id"> 8 / 10</span>
+                <span class="score-badge" id="scoreDisplay7">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title7">Grocery Shopping</div>
+                <div class="scenario-description" id="desc7">You're grocery shopping on a $100 weekly budget.</div>
+            </div>
+            <div class="button-trio" id="btnGroup7"></div>
+        </div>
+        
+        <div id="page8" class="page" data-page="8">
+            <div class="page-header">
+                <span class="page-id"> 9 / 10</span>
+                <span class="score-badge" id="scoreDisplay8">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title8">Windfall Gift</div>
+                <div class="scenario-description" id="desc8">Your grandmother gave you $5,000 for your future.</div>
+            </div>
+            <div class="button-trio" id="btnGroup8"></div>
+        </div>
+        
+        <div id="page9" class="page" data-page="9">
+            <div class="page-header">
+                <span class="page-id"> 10 / 10</span>
+                <span class="score-badge" id="scoreDisplay9">0 pts</span>
+            </div>
+            <div class="question-placeholder">
+                <div class="scenario-title" id="title9">Subscription Services</div>
+                <div class="scenario-description" id="desc9">You have 8 different subscriptions totaling $120/month (Netflix, Spotify, gym, meal kits, etc.).</div>
+            </div>
+            <div class="button-trio" id="btnGroup9"></div>
+        </div>
+
+        <!-- three end screens: good, so-so, bad with feedback cubes -->
+        <div id="endGood" class="end-screen">
+            <h2>✨ GOOD ✨</h2>
+            <p>21 – 30 points</p>
+            <!-- Feedback cube for Good ending -->
+            <div class="feedback-cube" id="feedbackGood">
+                <div class="feedback-header">🌟 FINANCIAL WIZARD 🌟</div>
+                <div class="feedback-content">
+                    <p>You made excellent financial decisions! You understand budgeting, saving, and smart spending. Keep building that emergency fund and investing for the future. You're on the path to financial freedom!</p>
+                    <ul class="feedback-tips">
+                        <li>Consider maxing out retirement accounts</li>
+                        <li>Look into diversified investments</li>
+                        <li>Help others learn financial literacy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="endSoso" class="end-screen">
+            <h2>🔸 SO‑SO 🔸</h2>
+            <p>11 – 20 points</p>
+            <!-- Feedback cube for So-So ending -->
+            <div class="feedback-cube" id="feedbackSoso">
+                <div class="feedback-header"> WORK IN PROGRESS </div>
+                <div class="feedback-content">
+                    <p>You have some good financial habits, but there's room for improvement. You're making okay choices, but sometimes impulse or lack of planning holds you back.</p>
+                    <ul class="feedback-tips">
+                        <li>Start a budget if you haven't already</li>
+                        <li>Build that emergency fund to 3-6 months</li>
+                        <li>Avoid high-interest debt</li>
+                        <li>Learn more about investing basics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="endBad" class="end-screen">
+            <h2>❗ BAD ❗</h2>
+            <p>0 – 10 points</p>
+            <!-- Feedback cube for Bad ending -->
+            <div class="feedback-cube" id="feedbackBad">
+                <div class="feedback-header">⚠️ FINANCIAL WAKE-UP CALL ⚠️</div>
+                <div class="feedback-content">
+                    <p>Your financial choices need serious attention. High-interest debt, impulse spending, and lack of savings can lead to major problems. But it's not too late to turn things around!</p>
+                    <ul class="feedback-tips">
+                        <li>Stop using credit cards for non-essentials</li>
+                        <li>Create a bare-bones budget TODAY</li>
+                        <li>Start with $500 emergency fund</li>
+                        <li>Avoid payday lenders at all costs</li>
+                        <li>Consider financial counseling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- reset / play again -->
+        <div class="reset-area">
+            <button id="resetBtn">↺ play again</button>
+        </div>
+        <div class="small-note">Choose wisely • Financial literacy matters</div>
+    </div>
+
+    <!--link to js file -->
+    <script src="script.js"></script>
+</body>
+</html>
