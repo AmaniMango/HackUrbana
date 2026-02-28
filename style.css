@@ -83,7 +83,10 @@ body {
     border-radius: 40px;
     font-size: 1.1rem;
 }
-
+.quizName{
+    font-weight: 700;
+    font-size: 2.2rem;
+}
 .score-badge {
     background: #25323b;
     color: #f6e9c9;
